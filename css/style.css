@@ -126,6 +126,7 @@ a:focus {
 	font-family:OpenSans-Light;
 	float:left;
 }
+.frequent_width1{ margin-top:48px !important;}
 .hello-txt {
 	color:#FFF;
 	font-size:17px;
@@ -554,6 +555,7 @@ a:focus {
 	margin-top: 7px;
 }
 .fly-birs-navone > ul > li {
+
 	list-style:none;
 	font-size:18.7px;
 	color:#45649b;
@@ -1005,8 +1007,42 @@ border-top:1px solid #8c959e;
 	margin: 5px 5px 0 0
 }
 #slide-menu{ top: 39px; border-top-left-radius: 5px;}
+#main{ overflow-x:hidden;}
+.banner_top_carina{
+	width:100%;
+	border-top-left-radius:1px solid #a9a9a9;
+	border-top-right-radius:1px solid #a9a9a9;
+	
+	position:relative;
+}
+.freq_img{ margin:0 auto;}
+.freq_txt{ font-size:78px; color:#233236; text-transform:uppercase; line-height: 85px;}
+.player_topMargin{ float:right; margin-top: 224px;}
+.freqs_picks_width{ width: 16% !important;}
+.frequs_first_width{padding-left: 17px !important;
+    padding-right: 0 !important;
+    width: 100% !important;}
+.top-ten-background{ position:relative; margin:0 auto;}
+.blue_img{ margin:0 auto;}
+.blue_img{ background:#00aeef; padding:9px;}
+.top-ten-background{ background:url(../img/home_waka/top_ten_background.png) no-repeat; width:100%;  position:relative;}
+.blue_txt{ margin:0 auto; margin-top:17px;}
+.blue_contened{ padding-top:237px; padding-bottom:246px;}
+.top_TenWidth{padding-left: 8px !important;
+    padding-right: 0.3px !important;
+    width: 16% !important;}
+.topten_margin{ margin-top:29px;}
+.topten_margin_second{padding-top:51px;}
+.blue_img_rising{ margin:0 auto;}
 
+#flexslider2 > .flex-control-nav{ bottom:-31px !important;}
+#flexslider2 > .flex-control-paging li a{background:none; border:#677375 solid 1px; box-shadow:none;}
+#flexslider2 > .flex-control-paging li a.flex-active{ background:#243237;
+    border: 2px solid #243237;
+    cursor: default;}
 /*home waka end */
+
+
 
  @media screen and (max-width: 1920px) {
  .container {
@@ -1048,6 +1084,7 @@ margin-left: 117px;
 .hide_contened{ display:none !important;}
 #push{ display:none;}
 #slide-menu{ display:none;}
+
 }
  @media screen and (max-width:1366px) {
 .container {
