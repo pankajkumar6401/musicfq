@@ -5,12 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>HISTORY WAKA</title>
+<title>PRODUCT WAKA</title>
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/font_style.css"/>
 <link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script src="js/script.js"></script>
 <script src="js/less.js"></script>
@@ -30,14 +31,60 @@
 
 	   </script>
 <script src="js/tooltip.js"></script>
-
+<script src="js/modernizr.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    /*$(function(){
+      SyntaxHighlighter.all();
+    });*/
+    $(window).load(function(){
+      $('#flexslider1').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+	 
+    });
+	
+  </script>
+  <script>
+  $(document).ready(function()
+  {
+	   $(window).load(function() {
+  $('#flexslider2').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    itemWidth: 360,
+    itemMargin: 5,
+    minItems: 2,
+    maxItems: 3
+  });
+});
+  });
+  </script>
+  <script>
+  $(document).ready(function()
+  {
+	   $(window).load(function() {
+  $('#flexslider3').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    itemWidth: 260,
+    itemMargin: 5,
+    minItems: 2,
+    maxItems: 5
+  });
+});
+  });
+  </script>
+  <style>#flexslider2 .slides img{width:auto; max-width:100%; float:left; }</style>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
 <!--start header-->
 <div class="top-background">
@@ -144,137 +191,160 @@
     </div>
   </div>
   <!--end header-->
-  <div class="container">
-  <div class="row">
-  <div class=" col-md-12">
-  <div class="download_icon">
- <img src="img/history_waka/download_icon.png"/>
- <p>Download History</p>
-  </div>
-  </div>
-  </div>
-  <div class="name_txtx">
-  <div class="row">
-  <div class="col-md-2"></div>
-    <div class="col-md-8">
-   
-    <div class="licence_txt">
-    <p>Name & License</p><p>Date Purchased</p>
-    </div>
-    <div class="clearfix"></div>
-    
-    
-    </div>
-      <div class="col-md-2"></div>
-    <div class="border_last_top"></div>
-  </div>
+<div class="contains">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="menu-nav">
+<ul>
+<li><a href="#">Home</a></li>
+<li>><a href="#">Styles</a></li>
+<li>><a href="#">Rock / Pop</a></li>
+<li>><a href="#">Carina Round</a></li>
+</ul>
 </div>
-  <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+<!--left start-->
+<div class="left-contened">
+<div class="col-md-7 left-fullWidth">
+<img src="img/product_waka/banner-img.png" class="img-responsive"/>
+<div>
 
+    <div class="input-group input-width">
+      <input type="text" class="form-control product-righttext" placeholder="Add Comment Here">
+      <span class="input-group-btn">
+        <button class="btn btn-default product-button" type="button">Add</button>
+      </span>
+    </div><!-- /input-group -->
   
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    </div>
-    <div class="border_last_top"></div>
-    </div>
-    
-    </div>
-    <div class="clearfix"></div>
-    <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</div>
+<div class="clearfix"></div>
+<div class="row">
+<div class="left_contains">
+<div class="col-md-3 col-xs-3 left-fullWidth">
+<div class="doenload-nav">
+<ul class="left-icns">
+<li class="leftOne"><a href="#">360</a></li>
+<li class="leftTwo"><a href="#">215</a></li>
 
-  
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    
-    </div>
-    </div>
-    <div class="border_last_top"></div></div>
-    <div class="clearfix"></div>
-    <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</ul>
+</div>
+</div>
+<div class="col-md-5 col-xs-5 default_button1 left-fullWidth">
+<button type="button" class="btn btn-default default_button">Download Preview</button>
+</div>
+<div class="col-md-4 col-xs-4 left-fullWidth">
+<div class="social-icons">
+<ul class="socialIcons">
+<li>Share</li>
+<li class="shareOne"><a href="#"></a></li>
+<li class="shareTwo"><a href="#"></a></li>
+<li class="sharethree"><a href="#"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
-  
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    
-    </div>
-   
-    </div>
-    <div class="border_last"></div>
-    </div>
-    <div class="clearfix"></div>
-   
- 
-  
-  </div>
-  
-  
-    <!--start footer-->
+</div>
+</div>
+
+<!--right start-->
+<div class="col-md-4 right-product">
+<div class="banner-contain">
+<div class="products-width">
+<div class="product-width">
+<p>Carina Round</p><br/> 
+<p>Backseat</p></div>
+
+<div class="product-rightContain"><span>$</span><span>20</span></div>
+<div class="clearfix"></div>
+<div class="product-paragraph"><p>A dreamy dubstep track featuring beautiful pads, wandering arps and deep bass sounds. Includes an instrumental version with out the vocal shouts. </p>
+<p>Please follow us for the latest updates on new music: <span>http://freqsmusic.com/carina-round/follow</span> 
+</p><p>If you can't find what you are looking for, but like our music, feel free to <span>contact us </span>with your suggestions and maybe it will be the next song we make! </p><p>If you have any questions, suggestions, feedback or need help, please contact us anytime. Please don't forget to rate, we would really appreciate it. 
+Thank you very much! 
+</p></div>
+<div class="product-secondNav  clearfix">
+<ul>
+<li>BPM: <span>97.5</span></li>
+<li>Length: <span>2:56</span></li>
+<li>Style: <span>Rock / Pop</span></li>
+</ul>
+</div>
+<div class="product-border clearfix">
+<div class="product-stanserdLeft">
+<p>Use in one end product, free or commercial. Most web uses. 10,000 copy limit for a downloaded or physical end product. No broadcast use. The total price includes the item price and a buyer fee.</p>
+</div>
+<div class="product-stanserdRight">
+<button type="button" class="btn btn-default product-blueButton">Standard  License</button>
+<button type="button" class="btn btn-default product-blackButton">Extended  License</button>
+</div>
+
+</div>
+<div class="product-middImg">
+<button type="button" class="btn btn-default image_button"></button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+
+<div class="col-md-7 tags-width">
+<p class="left-heading">Tags</p>
+<div class="tages">
+<a href="#">Pop</a>
+<a href="#">Music OK</a>
+<a href="#">Carina</a>
+<a href="#">Music Music</a>
+<a href="#">Rock</a>
+<a href="#">Pop</a>
+<a href="#">Music OK</a>
+<a href="#">Carina</a>
+<a href="#">Music OK</a>
+<a href="#">Rock</a>
+<a href="#">Pop</a>
+<a href="#">Music OK</a>
+<a href="#">Carina </a>
+<a href="#">Music Music</a>
+<a href="#">Rock</a>
+<a href="#">Pop</a>
+<a href="#">Music OK</a>
+</div>
+<div class="clearfix"></div>
+
+
+<p class="left-heading">More Items By Carina Round</p>
+<div class="moreItems">
+<img src="img/product_waka/moreItems.png"/>
+<img src="img/product_waka/moreItems.png"/>
+<img src="img/product_waka/moreItems.png"/>
+<img src="img/product_waka/moreItems.png"/>
+<img src="img/product_waka/moreItems.png"/>
+</div>
+<div class="clearfix"></div>
+
+<p class="left-heading">More Similar Items</p>
+<div class="moreItems moreItemSimiler">
+<img src="img/product_waka/similerOne.png"/>
+<img src="img/product_waka/similerTwo.png"/>
+<img src="img/product_waka/similerOne.png"/>
+<img src="img/product_waka/similerTwo.png"/>
+<img src="img/product_waka/similerOne.png"/>
+</div>
+</div>
+
+</div>
+
+</div> 
+<div class="clearfix"></div>
+</div>
+
+ </div> 
+   <!--start footer-->
   <div class="footer-back">
     <div class="footer-padding">
       <div class="container">
@@ -350,6 +420,7 @@
         </div>
       </div>
     </div>
+    <div class="clearfix"></div>
   </div>
   <!--end footer-->
 </body>

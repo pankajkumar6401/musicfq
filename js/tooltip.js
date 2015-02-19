@@ -18,6 +18,9 @@
         if ($tooltip.text() !== "") {
           return show($tooltip);
         }
+		
+		
+		
       } else {
         return hide($tooltip);
       }

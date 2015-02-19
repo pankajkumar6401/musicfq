@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>HISTORY WAKA</title>
+<title>THOUGHTS WAKA</title>
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -30,6 +30,63 @@
 
 	   </script>
 <script src="js/tooltip.js"></script>
+<script>
+$(document).ready(function () {
+    var menu = $('.menu1')
+    var timeout = 0;
+    var hovering = false;
+    menu.hide();
+
+    $('#mainbutton')
+        .on("click", function () {
+        hovering = true;
+        // Open the menu
+        $('.menu1')
+            .stop(true, true)
+            .slideDown(400);
+
+        if (timeout > 0) {
+            clearTimeout(timeout);
+        }
+    })
+        .on("mouseleave", function () {
+        resetHover();
+    });
+
+    $(".menu1")
+        .on("click", function () {
+        // reset flag
+        hovering = true;
+        // reset timeout
+        startTimeout();
+    })
+        .on("mouseleave", function () {
+        // The timeout is needed incase you go back to the main menu
+        resetHover();
+    });
+
+    function startTimeout() {
+        // This method gives you 1 second to get your mouse to the sub-menu
+        timeout = setTimeout(function () {
+            closeMenu();
+        }, 1000);
+    };
+
+    function closeMenu() {
+        // Only close if not hovering
+        if (!hovering) {
+            $('.menu1').stop(true, true).slideUp(400);
+        }
+    };
+
+    function resetHover() {
+        // Allow the menu to close if the flag isn't set by another event
+        hovering = false;
+        // Set the timeout
+        startTimeout();
+    };
+});
+</script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -144,137 +201,295 @@
     </div>
   </div>
   <!--end header-->
-  <div class="container">
-  <div class="row">
-  <div class=" col-md-12">
-  <div class="download_icon">
- <img src="img/history_waka/download_icon.png"/>
- <p>Download History</p>
-  </div>
-  </div>
-  </div>
-  <div class="name_txtx">
-  <div class="row">
-  <div class="col-md-2"></div>
-    <div class="col-md-8">
-   
-    <div class="licence_txt">
-    <p>Name & License</p><p>Date Purchased</p>
-    </div>
-    <div class="clearfix"></div>
-    
-    
-    </div>
-      <div class="col-md-2"></div>
-    <div class="border_last_top"></div>
-  </div>
+<!--middel contain start-->
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+<div class="top_icon">
+<img src="img/thoughts-waka/thought-topImg.png" class="img-responsive"/>
+
+<p class="Black thought">Thoughts</p>
+
 </div>
-  <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+<div class="what-txt">What's On Your Mind?</div>
 
-  
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    </div>
-    <div class="border_last_top"></div>
-    </div>
-    
-    </div>
-    <div class="clearfix"></div>
-    <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="right-clickNav">
+<div id="mainbutton"><img src="img/thoughts-waka/plus-sign.png"/></div>
+<ul class="menu1">
+<li><a href="#">Text Thought</a></li>
+<li><a href="#">Image Thought</a></li>
+</ul>
+<!--<ul class="menu1">
+<li><a href="#">Text Thought</a></li>
+<li><a href="#">Image Thought</a></li>
+</ul>-->
 
-  
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    
-    </div>
-    </div>
-    <div class="border_last_top"></div></div>
-    <div class="clearfix"></div>
-    <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</div>
+</div>
+</div>
 
+</div>
+<div class="clearfix"></div>
+<div class="row">
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>March 18, 2015 | 8:00 a.m</p><a href="#"><img src="img/thoughts-waka/arrow-cros.png" class="arrow-cros"/></a>
+<div class="full-popContain">
+
+<div class="clearfix">
+<div class="custome-shelly">
+<div class="img-roll">
+<a href="#"><img src="img/thoughts-waka/sheli-store.png" class="fullpop-img"/></a>
+</div>
+<p class="fullpop-para">Shelly Shore</p>
+</div>
+
+</div>
+<div class="your-thought clearfix">
+<textarea class="form-control clearfix custome-textarea" rows="3" placeholder="Your Thought Here"></textarea><!--priyanka-->
+</div>
+
+<img src="img/thoughts-waka/though-donIMG.png"/>
+<div class="clearfix"></div>
+<div class="top_button">
+<input type="button" class="go-button"/>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>March 18, 2015 | 6:30 a.m</p>
+<div class="mika-banner clearfix">
+<img src="img/thoughts-waka/mikka-banner.png" class="img-responsive"/>
+</div>
+<div class="mo-customecontains">
+<div class="mo-custome">
+<div class="mika-fullcontain">
+<a href="#"><img src="img/thoughts-waka/mika-img.png"/></a>
+</div>
+<p>Mike Ross</p>
+</div>
+</div>
+<div class="paragraph-mika">
+<div>
+<h1>It's always great to see the music year unfold.</h1>
+<p>These albums wowed me with the musical prowess exhibited by the artists.</p>
+</div>
+</div>
+<div>
+<ul class="product-img ">
+<li class="product-icons"><a href="#">14</a></li>
+<li class="product-iconsSecond"><a href="#">Share</a></li>
+</ul>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>March 15, 2015 | 3:44 p.m</p>
+<div class="full-popContain">
+<div class="clearfix"></div>
+<div class="shele">
+<div class="img-roll">
+<a href="#"><img src="img/thoughts-waka/sheli-store.png" class="fullpop-img"/></a>
+</div>
+<p class="fullpop-para">Shelly Shore</p>
+</div>
+<div class="your-thought">
+<h1>One good thing about music, when it hits you, you feel no pain.</h1>
+<p>Bob Marley</p>
+</div>
+<div class="thought-img"></div>
+<img src="img/thoughts-waka/though-donIMG.png"/>
+<div class="clearfix"></div>
+<div>
+<div>
+<ul class="product-img mike-cont">
+<li class="product-icons"><a href="#">35</a></li>
+<li class="product-iconsSecond"><a href="#">Share</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>Feb 3, 2015 | 12:15 p.m</p>
+<div class="full-popContain">
+
+<div class="shele">
+<div class="img-roll">
+<a href="#"><img src="img/thoughts-waka/sheli-store.png" class="fullpop-img"/></a>
+</div>
+<p class="fullpop-para">Shelly Shore</p>
+</div>
+<div class="your-thought">
+<h1>Change the tune please</h1>
+</div>
+<div class="thought-img"></div>
+<img src="img/thoughts-waka/though-donIMG.png"/>
+<div class="clearfix"></div>
+<div>
+<div>
+<ul class="product-img productnew">
+<li class="product-icons"><a href="#">12</a></li>
+<li class="product-iconsSecond"><a href="#">Share</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>Jan 7, 2015 | 11:45 p.m</p>
+<div class="mika-banner clearfix">
+<img src="img/thoughts-waka/mikka-banner.png" class="img-responsive"/>
+</div>
+<div class="mo-customecontains">
+<div class="mo-custome">
+<div class="mika-fullcontain">
+<a href="#"><img src="img/thoughts-waka/mika-img.png"/></a>
+</div>
+<p>Mo Jingle</p>
+</div>
+</div>
+<div class="paragraph-mika">
+<div>
+<h1>Love This Bend!!!</h1>
+
+</div>
+</div>
+<div>
+<ul class="product-img love-ul">
+<li class="product-icons"><a href="#">14</a></li>
+<li class="product-iconsSecond"><a href="#">Share</a></li>
+</ul>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>Jan 2, 2015 | 9:35 p.m</p>
+<div class="mika-banner clearfix">
+<img src="img/thoughts-waka/mikka-banner.png" class="img-responsive"/>
+</div>
+<div class="mo-customecontains">
+<div class="mo-custome">
+<div class="mika-fullcontain">
+<a href="#"><img src="img/thoughts-waka/mika-img.png"/></a>
+</div>
+<p>Daniel Bear</p>
+</div>
+</div>
+<div class="paragraph-mika">
+<div>
+<h1>Music journalists get hit with a steady helping of press releases every day.</h1>
+<p>For the music fan without that kind of sensory overload, a lot of music news can pass by without being seen.</p>
+</div>
+</div>
+<div>
+<ul class="product-img music-ul">
+<li class="product-icons"><a href="#">14</a></li>
+<li class="product-iconsSecond"><a href="#">Share</a></li>
+</ul>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-md-6">
+<div class="yourThought-leftPannel last-bottom">
+<div class="thought-left">
+<p>March 18, 2015 | 8:00 a.m</p><a href="#"><img src="img/thoughts-waka/arrow-cros.png" class="arrow-cros"/></a>
+<div class="full-popContain">
+
+<div class="clearfix">
+<div class="custome-shelly">
+<div class="img-roll">
+<a href="#"><img src="img/thoughts-waka/sheli-store.png" class="fullpop-img"/></a>
+</div>
+<p class="fullpop-para">Shelly Shore</p>
+</div>
+</div>
+<div class="your-thought clearfix">
+<textarea class="form-control clearfix custome-textarea" rows="3" placeholder="Your Thought Here"></textarea><!--priyanka-->
+</div>
+
+<img src="img/thoughts-waka/though-donIMG.png"/>
+<div class="clearfix"></div>
+<div class="top_button">
+<input type="button" class="go-button"/>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="yourThought-leftPannel">
+<div class="thought-left">
+<p>March 18, 2015 | 8:00 a.m</p>
+<a href="#"><img class="arrow-cros" src="img/thoughts-waka/arrow-cros.png"></a>
+<div class="mika-banner clearfix">
+<img src="img/thoughts-waka/drag-yourimg.png" class="img-responsive"/>
+</div>
+<div class="mo-customecontains">
+<div class="mo-custome">
+<div class="mika-fullcontain">
+<a href="#"><img src="img/thoughts-waka/mika-img.png"/></a>
+</div>
+<p>Daniel Bear</p>
+</div>
+</div>
+<div class="paragraph-mika">
+<div>
+<h1>Music journalists get hit with a steady helping of press releases every day.</h1>
+<p>For the music fan without that kind of sensory overload, a lot of music news can pass by without being seen.</p>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="top_button">
+<input type="button" class="go-button1">
+</div>
+</div>
+<div class="clearfix"></div>
+
+</div>
+</div>
+</div>
+</div>
+<!--middel contain end-->
   
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    
-    </div>
-   
-    </div>
-    <div class="border_last"></div>
-    </div>
-    <div class="clearfix"></div>
-   
- 
-  
-  </div>
-  
-  
-    <!--start footer-->
+   <!--start footer-->
   <div class="footer-back">
     <div class="footer-padding">
       <div class="container">
@@ -350,6 +565,49 @@
         </div>
       </div>
     </div>
+  </div>
+  
+  <!--pop start-->
+  
+  <div class="pop-contain">
+  <a href="#"><img class="arrow-cros" src="img/thoughts-waka/arrow-cros.png"></a>
+  <div class="popup-heading">
+  <h1>Upload a Thought</h1>
+  <p>Here you can share your thoughts about the music on the site or on music in general.</p>
+ 
+  <div class="blue-border">
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="tital">Title</label>
+    <input type="text" class="form-control" placeholder="Text input">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" class="tital">Thought</label>
+    <textarea class="form-control top-textarea" rows="3"></textarea>
+  </div>
+   
+  
+  
+</form>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" class="tital">Thought</label>
+  <div class="custom_file_upload">
+	<input type="text" class="file" name="file_info">
+	<div class="file_upload">
+		<input type="file" id="file_upload" name="file_upload">
+	</div>
+</div>
+<div class="publishing-buttons">
+<button type="button" class="btn btn-default btn-lg publish-button">Publish</button>
+<button type="button" class="btn btn-default btn-lg publish-button">Clear</button>
+<div class="text-button">
+<img src="img/thoughts-waka/text-button.png" class="img-responsive"/>
+</div>
+</div>
+</div>
+   </div>
+  <div class="clearfix"></div>
   </div>
   <!--end footer-->
 </body>

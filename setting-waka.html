@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>HISTORY WAKA</title>
+<title>SETTING WAKA</title>
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -30,6 +30,64 @@
 
 	   </script>
 <script src="js/tooltip.js"></script>
+<script>
+$(document).ready(function () {
+    var menu = $('.menu1')
+    var timeout = 0;
+    var hovering = false;
+    menu.hide();
+
+    $('#mainbutton')
+        .on("click", function () {
+        hovering = true;
+        // Open the menu
+        $('.menu1')
+            .stop(true, true)
+            .slideDown(400);
+
+        if (timeout > 0) {
+            clearTimeout(timeout);
+        }
+    })
+        .on("mouseleave", function () {
+        resetHover();
+    });
+
+    $(".menu1")
+        .on("click", function () {
+        // reset flag
+        hovering = true;
+        // reset timeout
+        startTimeout();
+    })
+        .on("mouseleave", function () {
+        // The timeout is needed incase you go back to the main menu
+        resetHover();
+    });
+
+    function startTimeout() {
+        // This method gives you 1 second to get your mouse to the sub-menu
+        timeout = setTimeout(function () {
+            closeMenu();
+        }, 1000);
+    };
+
+    function closeMenu() {
+        // Only close if not hovering
+        if (!hovering) {
+            $('.menu1').stop(true, true).slideUp(400);
+        }
+    };
+
+    function resetHover() {
+        // Allow the menu to close if the flag isn't set by another event
+        hovering = false;
+        // Set the timeout
+        startTimeout();
+    };
+});
+</script>
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -144,137 +202,163 @@
     </div>
   </div>
   <!--end header-->
-  <div class="container">
-  <div class="row">
-  <div class=" col-md-12">
-  <div class="download_icon">
- <img src="img/history_waka/download_icon.png"/>
- <p>Download History</p>
-  </div>
-  </div>
-  </div>
-  <div class="name_txtx">
-  <div class="row">
-  <div class="col-md-2"></div>
-    <div class="col-md-8">
-   
-    <div class="licence_txt">
-    <p>Name & License</p><p>Date Purchased</p>
-    </div>
-    <div class="clearfix"></div>
-    
-    
-    </div>
-      <div class="col-md-2"></div>
-    <div class="border_last_top"></div>
+<!--middel contain start-->
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+<div class="top_icon">
+<img src="img/setting_waka/setting-icon.png" class="img-responsive"/>
+
+<p class="Black thought">Settings</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+<div class="setting-contain">
+<div class="row">
+<div class="col-md-6">
+<div class="personal-informationLeft">
+<h1>Personal Information:</h1>
+<input type="text" class="form-control" placeholder="Willa Wowowo">
+<input type="text" class="form-control" placeholder="Willa97@gmail.com">
+<img src="img/setting_waka/setting-left.png"/>
+
+
+<div class="upload clearfix">
+	<input type="text" class="files" name="file_info"  placeholder="Upload an Avatar">
+	<div class="file_upload_input">
+		<input type="file" id="file_upload" name="Upload an Avatar">
+	</div>
+</div>
+<div class="upload-left">
+<p>JPEG XX x XX px</p>
+<button type="button" class="btn btn-default">Update</button>
+</div>
+
+
+</div>
+</div>
+<div class="col-md-6">
+<div class="personal-informationRight">
+<h1>Billing Information:</h1>
+<input type="text" class="form-control" placeholder="Company Name">
+<p>If you want your invoices addressed to a company. 
+Leave blank to use your full name.</p>
+<input type="text" class="form-control" placeholder="Your PayPal Account">
+<input type="text" class="form-control" placeholder="Your PayPal Password">
+
+
+
+
+<div class="upload-left">
+
+<button type="button" class="btn btn-default">Update</button>
+</div>
+
+
+</div>
+<div class="personal-informationRight clearfix">
+<h1>Email Settings</h1>
+<div>
+<div class="has-success">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxSuccess" value="option1">
+      <span>Likes</span>
+      
+    </label>
+    <p>Send an email reminding me that I got a Like</p>
+    <label>
+      <input type="checkbox" id="checkboxSuccess" value="option1">
+     Comments
+      
+    </label>
+    <p>Send an email reminding me that I got a Comment</p>
+    <label>
+      <input type="checkbox" id="checkboxSuccess" value="option1">
+      Purchase
+      
+    </label>
+    <p>Send an email reminding my song is purchased</p>
   </div>
 </div>
-  <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-md-12">
+<div class="personal-informationsLast">
+<h1>Your Social Networks</h1>
+<div class="lase-left">
+<form class="form-horizontal">
+  <div class="form-group">
+   <img src="img/setting_waka/facebook.png"/>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" placeholder="Facebook Username">
+    </div>
+  </div>
+  <div class="form-group">
+     <img src="img/setting_waka/tub.png"/>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" placeholder="Twitter Username">
+    </div>
+  </div>
+  <div class="form-group">
+    <img src="img/setting_waka/google-icon.png"/>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" placeholder="Google+ Account ID">
+    </div>
+  </div>
+  
+  
+</form>
+</div>
+<div class="lase-right clearfix">
+<form class="form-horizontal">
+  <div class="form-group">
+   <img src="img/setting_waka/linkin-icon.png"/>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" placeholder="Linkedin Public Profile URL">
+    </div>
+  </div>
+  <div class="form-group">
+     <img src="img/setting_waka/vimco.png"/>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" placeholder="Vimeo Username">
+    </div>
+  </div>
+  <div class="form-group">
+    <img src="img/setting_waka/youtube.png"/>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" placeholder="YouTube Username">
+    </div>
+  </div>
+  
+  
+</form>
 
-  
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    </div>
-    <div class="border_last_top"></div>
-    </div>
-    
-    </div>
-    <div class="clearfix"></div>
-    <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
+</div>
+<div class="upload-left boder-lastGray">
+  <button class="btn btn-default" type="button">Update</button></div>
+<div class="product-middImg clearfix">
+<button class="btn btn-default save_button" type="button"></button>
+</div>
+</div>
+</div>
+</div>
+</div>
 
+<div class="clearfix"></div>
+</div>
+<!--middel contain end-->
   
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    
-    </div>
-    </div>
-    <div class="border_last_top"></div></div>
-    <div class="clearfix"></div>
-    <div class="name_txtx">
-  <div class="row">
-   <div class="licence_contened">
-   <div class="jonney_contened">
-  <div class="col-md-6 joinney_margin">
-
-  
-  <div class="jonneyFirst_name">
-  <img src="img/history_waka/names_img.png" class="img-responsive img-first"/>
-  <span>
-  <ul>
-  <li>Johnny Crisspy</li>
-  <li>Don't Go</li>
-  <li>Standard License</li>
-  </ul>
-  </span>
-  
-  
- <div class="clearfix"></div>
-  </div>
- 
- </div>
-    
-    </div>
-    <div class="jonneySecond_name"><div class="col-md-6 button_margin">
-    <span>08 Jan, 2015</span><a href="#" class="btn btn-default btn-lg active" role="button">Download</a><a href="#" class="btn btn-default btn-lg active" role="button">Download</a>
-    </div></div>
-    
-    </div>
-   
-    </div>
-    <div class="border_last"></div>
-    </div>
-    <div class="clearfix"></div>
-   
- 
-  
-  </div>
-  
-  
-    <!--start footer-->
+   <!--start footer-->
   <div class="footer-back">
     <div class="footer-padding">
       <div class="container">
@@ -351,6 +435,10 @@
       </div>
     </div>
   </div>
+  
+ 
+  
+  
   <!--end footer-->
 </body>
 </html>
